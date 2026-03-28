@@ -1,4 +1,3 @@
-import time
 import pytest
 from pages.age_verification_page import AgeVerificationPage
 
@@ -23,7 +22,7 @@ def test_age_verification_valid(driver, dob):
 @pytest.mark.parametrize("dob", [
     "",  # empty date field (boundary)
     "XX-XX-XXXX", # invalid date entry
-    "09-11-2007",  # Just under 18
+    "29-03-2008",  # Just under 18
     "01-01-2020",  # Clearly under 18
 ])
 def test_age_verification_invalid(driver, dob):

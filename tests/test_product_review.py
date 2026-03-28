@@ -99,8 +99,8 @@ def test_review_invalid(product, review_text, expected_outcome, driver, login_pa
 
 @pytest.mark.parametrize(
     "product_name, updated_number_of_stars, updated_review",
-    [("Oranges", '3', 'Just normal ones')]
-    [("Loose Pears", '5', 'Very good fresh Pears')]
+    [("Oranges", '3', 'Just normal ones'),
+    ("Loose Pears", '5', 'Very good fresh Pears')]
 )
 def test_update_rating(driver, product_name, updated_number_of_stars, updated_review, login_page, shop_page,
                        age_verification, product_page):
